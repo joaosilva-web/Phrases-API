@@ -1,4 +1,5 @@
 import { Request, Response } from 'express'
+import { Sequelize } from 'sequelize'
 
 import { Phrase } from '../models/Phrase'
 
@@ -70,4 +71,14 @@ export const deleteOnePhrase = async (req: Request, res: Response) => {
         }
     })
     res.json({})
+}
+
+export const getRandomPhrase = async (req: Request, res: Response) => {
+    let phrase = await Phrase.findOne({
+        order: [
+            Sequelize.fn('RANDOM')
+        ]
+    })
+
+    res.json({ phrase })
 }
