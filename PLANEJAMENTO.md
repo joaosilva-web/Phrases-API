@@ -5,3 +5,4 @@
 * [x] GET /frases/123 - pegar uma frase específica
 * [x] PUT /frases/123 - alterar uma frase específica
 * [x] DELETE /frases/123 - deletar uma frase específica
+* []  GET /frase/aleatoria - pegar uma frase aleatoria
