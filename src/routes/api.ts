@@ -13,5 +13,7 @@ router.get('/nome/:nome', ApiController.nome)
 router.post('/frases', ApiController.createPhrase)
 router.get('/frases', ApiController.getPhrases)
 router.get('/frase/:id', ApiController.getOnePhrase)
+router.put('/frase/:id', ApiController.editOnePhrase)
+router.delete('/frase/:id', ApiController.deleteOnePhrase)
 
 export default router
